@@ -4,9 +4,6 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.all
-    @in_stock_products = Product.in_stock
-    @discounted_products = Product.discounted
-    @mid_range_products = Product.price_between(10, 50)
   end
 
   # GET /products/1 or /products/1.json

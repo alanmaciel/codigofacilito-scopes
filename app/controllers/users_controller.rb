@@ -4,9 +4,7 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   class UsersController < ApplicationController
     def index
-      @users = User.active
-      @admins = User.by_role("admin")
-      @recent_signups = User.recent_signups
+      @users = User.all
     end
   end
 

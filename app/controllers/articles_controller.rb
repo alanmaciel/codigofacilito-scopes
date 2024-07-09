@@ -4,10 +4,6 @@ class ArticlesController < ApplicationController
   # GET /articles or /articles.json
   def index
     @articles = Article.all
-    @published_articles = Article.published
-    @recent_articles = Article.recent
-    @articles_by_author = Article.by_author(params[:author_id])
-    @last_year_articles = Article.published_last_year
   end
 
   # GET /articles/1 or /articles/1.json
